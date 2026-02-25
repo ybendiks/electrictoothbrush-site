@@ -180,9 +180,17 @@ li { margin-bottom: 0.35rem; }
 /* Single column layout */
 .page-wrapper.full-width { grid-template-columns: 1fr; max-width: var(--content-width); }
 
+/* Content-wrap layout (alternate wrapper used on some pages) */
+.content-wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 2rem 4rem;
+}
+
 /* ── Breadcrumbs ── */
-.breadcrumbs {
-  font-size: 0.85rem;
+.breadcrumbs,
+.breadcrumb {
+  font-size: 0.82rem;
   color: var(--muted);
   margin-bottom: 1.5rem;
   display: flex;
@@ -190,9 +198,30 @@ li { margin-bottom: 0.35rem; }
   gap: 0.35rem;
   align-items: center;
 }
-.breadcrumbs a { color: var(--teal); }
-.breadcrumbs a:hover { text-decoration: underline; }
+.breadcrumbs a,
+.breadcrumb a { color: var(--teal); }
+.breadcrumbs a:hover,
+.breadcrumb a:hover { text-decoration: underline; }
 .breadcrumbs .sep { color: var(--gray-300); }
+.breadcrumbs span:last-child,
+.breadcrumb li:last-child { color: var(--body-text); }
+
+/* Breadcrumb <ol> variant — strip list styling, make horizontal with > separators */
+.breadcrumb ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0;
+  padding: 0;
+  margin: 0;
+}
+.breadcrumb ol li { margin-bottom: 0; }
+.breadcrumb ol li + li::before {
+  content: "›";
+  color: var(--gray-300);
+  margin: 0 0.45rem;
+}
 
 /* ── Quick Answer Box ── */
 .quick-answer {
@@ -604,7 +633,8 @@ li { margin-bottom: 0.35rem; }
 }
 @media (max-width: 480px) {
   body { font-size: 16px; }
-  .page-wrapper { padding: 1.25rem 1rem 3rem; }
+  .page-wrapper,
+  .content-wrap { padding: 1.25rem 1rem 3rem; }
   .footer-inner { grid-template-columns: 1fr; }
   .quick-picks { grid-template-columns: 1fr; }
   .category-grid { grid-template-columns: 1fr; }
