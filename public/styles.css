@@ -565,18 +565,28 @@ li { margin-bottom: 0.35rem; }
 .info-box-title { font-size: 0.95rem; font-weight: 700; color: var(--deep-teal); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
 .info-box p { font-size: 0.92rem; margin: 0; }
 
-/* ── Verdict Box ── */
-.verdict-box {
-  background: linear-gradient(135deg, var(--deep-teal), #0F766E);
-  color: var(--white);
+/* ── Verdict / Winner / Recommendation Box ── */
+.verdict-box,
+.winner-box,
+.recommendation-box {
+  background: var(--deep-teal);
+  color: var(--mint-bg);
   border-radius: var(--radius-lg);
   padding: 2rem;
   margin: 2rem 0;
 }
-.verdict-box h3 { color: var(--white); margin-top: 0; }
-.verdict-box p { opacity: 0.95; }
-.verdict-box .product-card-cta { background: var(--mint); }
-.verdict-box .product-card-cta:hover { background: #059669; }
+.verdict-box h2, .verdict-box h3,
+.winner-box h2, .winner-box h3,
+.recommendation-box h2, .recommendation-box h3 { color: var(--white); margin-top: 0; }
+.verdict-box p, .winner-box p, .recommendation-box p { color: var(--mint-bg); }
+.verdict-box strong, .winner-box strong, .recommendation-box strong { color: var(--white); }
+.verdict-box a, .winner-box a, .recommendation-box a { color: var(--mint); }
+.verdict-box .product-card-cta,
+.winner-box .product-card-cta,
+.recommendation-box .product-card-cta { background: var(--mint); color: var(--white); }
+.verdict-box .product-card-cta:hover,
+.winner-box .product-card-cta:hover,
+.recommendation-box .product-card-cta:hover { background: #059669; }
 
 /* ── Section divider ── */
 .section-divider {
