@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://electrictoothbrush.site/sitemap.xml
+Sitemap: https://www.electrictoothbrush.site/sitemap.xml
