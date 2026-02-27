@@ -673,3 +673,51 @@ li { margin-bottom: 0.35rem; }
 .related-links h3 { margin-top: 0; font-size: 1rem; color: var(--deep-teal); }
 .related-links ul { margin-bottom: 0; }
 .related-links li { font-size: 0.92rem; }
+
+/* ── Guide Index (homepage) ── */
+.guide-index {
+  background: var(--light-gray);
+  border-top: 1px solid var(--border);
+  padding: 3rem 1.5rem;
+}
+.guide-index-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.guide-index h2 {
+  text-align: center;
+  color: var(--deep-teal);
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+}
+.guide-index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2rem 3rem;
+}
+.guide-index-col h3 {
+  font-size: 0.95rem;
+  color: var(--teal);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--border);
+}
+.guide-index-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.guide-index-col li {
+  font-size: 0.85rem;
+  line-height: 1.8;
+}
+.guide-index-col a {
+  color: var(--body-text);
+  text-decoration: none;
+}
+.guide-index-col a:hover {
+  color: var(--teal);
+  text-decoration: underline;
+}

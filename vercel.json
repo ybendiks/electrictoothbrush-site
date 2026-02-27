@@ -1,5 +1,8 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "outputDirectory": "public"
+  "outputDirectory": "public",
+  "redirects": [
+    { "source": "/electric-topy-benefits", "destination": "/electric-toothbrush-benefits", "permanent": true }
+  ]
 }
