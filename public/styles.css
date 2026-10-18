@@ -721,3 +721,46 @@ li { margin-bottom: 0.35rem; }
   color: var(--teal);
   text-decoration: underline;
 }
+
+/* Affiliate CTA Box */
+.affiliate-cta-box {
+  background: #F0FDFA;
+  border: 2px solid #0D9488;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+.affiliate-cta-box h3 {
+  color: #134E4A;
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+}
+.affiliate-disclaimer {
+  font-size: 0.8rem;
+  color: #6B7280;
+  margin: 0 0 1rem;
+}
+.affiliate-cta-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.affiliate-cta-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.affiliate-product-name {
+  font-weight: 600;
+  color: #1F2937;
+  flex: 1;
+  min-width: 150px;
+}
+@media (max-width: 600px) {
+  .affiliate-cta-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
